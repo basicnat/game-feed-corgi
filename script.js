@@ -95,10 +95,11 @@ function createTapTreat() {
 function finishGame() {
    
     timeEl.parentNode.classList.add('hide')
-    board.innerHTML = `<h2>Съедено лакомств:<br>${score} </h2>`
+    board.innerHTML = `<h3>Съедено лакомств:<br> ${score} </h3>`
     
     makePrediction()
     restartBtn.classList.remove('hide')
+    restartBtn.classList.add('restart')
     restartBtn.addEventListener('click', () => {    
         location.reload();
     })
@@ -110,7 +111,7 @@ function makePrediction() {
     photo.classList.add('photo')
     phrase.classList.add('phrase')
     
-    if (score > 14) {                 
+    if (score > 15) {                 
         photo.style.backgroundImage = 'url(./img/snow-globes-welsh-corgi.jpg)';       
         phrase.innerHTML = `<span>Хорошо, я наелся. Вот моё предсказание:</span><br><br><i>В новом году тебя ждёт ${wishSet[i]}, если на столе будет ${foodSet[i]}</i>`       
         

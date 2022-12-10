@@ -23,7 +23,13 @@ h1 {
 
 h2 {
     font-size: 2rem;
-    margin: 20px;
+    margin: 15px;
+}
+
+h3 {
+    font-size: 1.7rem;
+    font-weight: 800;
+    margin-bottom: 15px;
 }
 
 a {
@@ -62,10 +68,9 @@ a {
     align-items: center;
     justify-content: center;
     transition: margin .5s ease-out;
-    // background: linear-gradient(90deg, #751717 0%, #FF0000 100%), url('./img/background-pattern.png') 50%;
     background-image: linear-gradient(90deg, rgba(117, 23, 23, 0.95), rgba(255, 0, 0, 0.94)), url('./img/background-pattern.png');
     background-size: contain;
-    
+    position: relative;
 }
 
 .screen.up {
@@ -136,17 +141,14 @@ button:hover {
     color: #FF0000;
 }
 
-.audioPlayBtn {
-    font-size: 1em;
-    padding: 5px;
-    border: 2px solid rgb(187, 128, 128);
-    color: rgb(187, 128, 128);
-    margin-top: 20px;
-}
-
 .hide {
     opacity: 0;
-    
+    cursor: none;    
+}
+.restart {
+ position: absolute;
+ bottom: 10vh;
+
 }
 
 .board {
@@ -189,9 +191,7 @@ button:hover {
     border-radius: 5px;
     font-size: 1.3em;
     margin: 10px auto;
-    padding: 10px;
-    background: linear-gradient(133deg, rgb(123 2 9) 0%, rgb(214, 0, 0) 100%);
-    
+    padding: 15px;
     color: #fff;
     text-align: left;
 
