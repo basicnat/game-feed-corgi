@@ -101,7 +101,8 @@ function finishGame() {
     restartBtn.classList.remove('hide')
     restartBtn.classList.add('restart')
     restartBtn.addEventListener('click', () => {
-        screens[3].classList.add('down')    
+        screens[3].classList.add('down')
+        location.reload()    
     })
 }
 
