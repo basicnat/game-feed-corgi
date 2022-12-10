@@ -100,8 +100,8 @@ function finishGame() {
     makePrediction()
     restartBtn.classList.remove('hide')
     restartBtn.classList.add('restart')
-    restartBtn.addEventListener('click', () => {    
-        location.reload();
+    restartBtn.addEventListener('click', () => {
+        screens[3].classList.add('down')    
     })
 }
 
