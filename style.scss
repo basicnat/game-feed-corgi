@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,800;1,400;1,600&display=swap');
+* {
+    
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow: hidden;
+    font-family: 'Nunito', sans-serif;
+    height: 100vh;
+    color: white;
+    text-align: center;
+    box-sizing: border-box;
+    
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    
+}
+
+h2 {
+    font-size: 2rem;
+    margin: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #FFEBEB;
+}
+
+
+.start-btn {
+    padding: 10px;
+    margin: 10px auto;
+    background-color: transparent;
+    border:  2px solid #fff;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+.start-btn:hover {
+    background-color: #fff;
+    color: #FF0000;
+    a {
+     color: #FF0000;
+
+    }
+}
+
+.start {
+    font-size: 1.5rem;
+}
+
+.screen {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: margin .5s ease-out;
+    // background: linear-gradient(90deg, #751717 0%, #FF0000 100%), url('./img/background-pattern.png') 50%;
+    background-image: linear-gradient(90deg, rgba(117, 23, 23, 0.95), rgba(255, 0, 0, 0.94)), url('./img/background-pattern.png');
+    background-size: contain;
+    
+}
+
+.screen.up {
+    margin-top: -100vh;
+}
+
+
+
+.corgi {
+    width: 200px;
+    margin: 10px auto;
+    border-radius: 50%;
+}
+
+.description {
+    margin: 15px;
+    font-size: 1.3em;
+    font-weight: 400;
+}
+
+.time-list {
+    display: flex;
+    list-style: none;
+    
+}
+
+.treat-list {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    margin-top: 20px;      
+        
+    #treat1 {
+        background-image: url('./img/biscuit-cookie-svgrepo-com.svg');
+        background-repeat: no-repeat;
+        width: 90px;
+        height: 90px;
+        border: 10px solid transparent;
+        
+    }
+
+    #treat2 {
+        background-image: url('./img/pizza-svgrepo-com.svg');
+        background-repeat: no-repeat;
+        width: 90px;
+        height: 90px;
+        border: 10px solid transparent;
+    }
+    
+}
+
+
+
+button {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin: 10px;
+}
+
+button:hover {
+    border: 2px solid #fff;
+    background-color: #ffffff;
+    color: #FF0000;
+}
+
+.audioPlayBtn {
+    font-size: 1em;
+    padding: 5px;
+    border: 2px solid rgb(187, 128, 128);
+    color: rgb(187, 128, 128);
+    margin-top: 20px;
+}
+
+.hide {
+    opacity: 0;
+    
+}
+
+.board {
+    width: 80%;
+    height: 80%;
+    position: relative;
+    background: linear-gradient(159deg, #FF0000, #751717);
+    box-shadow: inset 2px 3px 20px #573333, inset 4px 3px 9px #751717;
+    border-radius: 2%;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.tapTreat {
+    position: absolute;
+    cursor: grab;
+    animation: animate_grow 1s infinite;
+}
+
+
+
+.tapTreat:hover {
+	animation: none;
+}
+ 
+@keyframes animate_grow {
+	0% {
+		transform: scale3d(1, 1, 1);
+	}
+	50% {
+		transform: scale3d(1.3, 1.3, 1.3);
+	}
+	100% {
+		transform: scale3d(1, 1, 1);
+	}
+}
+
+.phrase {
+    width: fit-content;
+    border-radius: 5px;
+    font-size: 1.3em;
+    margin: 10px auto;
+    padding: 10px;
+    background: linear-gradient(133deg, rgb(123 2 9) 0%, rgb(214, 0, 0) 100%);
+    
+    color: #fff;
+    text-align: left;
+
+    span {
+        font-weight: 800;
+    
+    }
+}
+
+.photo {
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+}

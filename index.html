@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Aim game</title>
+</head>
+<body>
+
+    <div class="screen">
+        
+        <h1>Накорми корги</h1>
+        <p class="description">Хватай лакомства, взамен на них жадный пёсик даст предсказание на новый год</p>
+        <img class="corgi" src="./img/corgi-main.jpg" alt="корги">
+        <div class="start-btn" id="start">
+            <a href="#" class="start" >Начать игру</a>            
+        </div> 
+        
+    </div>
+
+    <div class="screen">
+        <h2>Выбери время</h2>
+        <ul class="time-list" id="time-list">
+            <li>
+                <button class="time-btn" data-time="10">10 сек</button>
+            </li>
+            <li>
+                <button class="time-btn" data-time="15">15 сек</button>
+            </li>
+            <li>
+                <button class="time-btn" data-time="20">20 сек</button>
+            </li>
+        
+        </ul>
+    </div>
+    
+    <div class="screen">
+        <h2>Выбери лакомство</h2>
+        <ul class="treat-list" id="treat-list">
+            <li>
+                <button class="treat-btn" id="treat1" data-treat="1"></button>
+            </li>
+            <li>
+                <button class="treat-btn" id="treat2" data-treat="2"> </button>
+            </li>
+            
+    
+        </ul>
+    </div>
+
+    <div class="screen">
+        <h2>Таймер <span id="time">0:00</span></h2>
+        <div class="board" id="board"></div>
+        <button class="hide" id="restart" >Кормить ещё</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
