@@ -115,7 +115,7 @@ function makePrediction() {
     photo.classList.add('photo')
     phrase.classList.add('phrase')
     
-    if (score > 15) {                 
+    if (score > 18) {                 
         photo.style.backgroundImage = 'url(./img/snow-globes-welsh-corgi.jpg)';       
         phrase.innerHTML = `<span>Хорошо, я наелся. Вот моё предсказание:</span><br><br><i>В новом году тебя ждёт ${wishSet[i1]}, если на столе будет ${foodSet[i2]}</i>`       
         
