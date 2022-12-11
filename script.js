@@ -103,7 +103,7 @@ function finishGame() {
     restartBtn.classList.remove('hide')
     restartBtn.classList.add('restart')
     restartBtn.addEventListener('click', () => {
-        location.reload()    
+        window.location.reload(true)    
     })
 }
 
