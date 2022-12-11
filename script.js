@@ -103,7 +103,8 @@ function finishGame() {
     restartBtn.classList.remove('hide')
     restartBtn.classList.add('restart')
     restartBtn.addEventListener('click', () => {
-        window.location.reload(true)    
+        window.location.replace('https://basicnat.github.io/game-feed-corgi/')
+           
     })
 }
 
