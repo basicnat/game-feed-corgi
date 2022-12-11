@@ -76,9 +76,6 @@ a {
     margin-top: -100vh;
 }
 
-.screen.down {
-    margin-top: 0;
-}
 
 .corgi {
     width: 200px;
@@ -147,7 +144,7 @@ button:hover {
     cursor: none;    
 }
 .restart { 
-    margin-bottom: 5vh;
+    margin-bottom: 13vh;
     font-size: 1em;
 }
 
@@ -168,8 +165,6 @@ button:hover {
     animation: animate_grow 1s infinite;
 }
 
-
-
 .tapTreat:hover {
 	animation: none;
 }
@@ -189,8 +184,8 @@ button:hover {
 .phrase {
     width: fit-content;
     border-radius: 5px;
-    font-size: 1.3em;
-    margin: 10px auto;
+    font-size: 1em;
+    margin: 5px auto;
     padding: 15px;
     color: #fff;
     text-align: left;
@@ -206,6 +201,6 @@ button:hover {
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0 auto;
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
 }

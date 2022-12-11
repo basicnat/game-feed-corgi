@@ -6,11 +6,10 @@ const timeEl = document.querySelector('#time')
 const treatList = document.querySelector('#treat-list')
 const board = document.querySelector('#board')
 const restartBtn = document.querySelector('#restart')
-const wishSet = ['любовь','удача','богатство','успех','добро','радость','крутость','чилл','уют','отпуск','красота','беззаботность'];
-const foodSet = ['питша','банановое лакомство','торт из Цеха','ролл с осьминогом','дорадо под соусом','салат с колбасой','сосиска в тесте','пончик со сгущёнкой','бургер с луком','гора пельменей','мандариновое пирожное','сыр с плесенью'];
-const playAudioBtn = document.querySelector('.audioPlayBtn')
-const audio = document.querySelector('audio')
-const i = getRandomIndex(0, 12);
+const wishSet = ['любовь','удача','богатство','успех','добро','радость','крутость','путешествие','уют','отпуск','красота','беззаботность'];
+const foodSet = ['пицца','банановое лакомство','торт из Цеха','ролл с осьминогом','дорадо под соусом','салат с колбасой','сосиска в тесте','пончик со сгущёнкой','бургер с луком','гора пельменей','мандариновое пирожное','сыр с плесенью'];
+const i1 = getRandomIndex(0, 12);
+const i2 = getRandomIndex(0, 12);
 let time = 0
 let score = 0
 let treatId = 0
@@ -50,7 +49,12 @@ function startGame() {
     setInterval(decreaseTime, 1000)
     createTapTreat()
     setTime(time)
-    
+    // restartBtn.classList.remove('hide')
+    // restartBtn.classList.add('restart')
+    // restartBtn.addEventListener('click', () => {
+    //     screens[3].classList.add('down')
+    //     location.reload()    
+    // })
 }
 
 function decreaseTime() {
@@ -92,29 +96,27 @@ function createTapTreat() {
     board.append(tapTreat)
 }
 
-function finishGame() {
-   
+function finishGame() {   
     timeEl.parentNode.classList.add('hide')
-    board.innerHTML = `<h3>Съедено лакомств:<br> ${score} </h3>`
-    
+    board.innerHTML = `<h3>Съедено лакомств:<br> ${score} </h3>`    
     makePrediction()
     restartBtn.classList.remove('hide')
     restartBtn.classList.add('restart')
     restartBtn.addEventListener('click', () => {
-        screens[3].classList.add('down')
         location.reload()    
     })
 }
 
 function makePrediction() {
     const phrase = document.createElement('p')
-    const photo = document.createElement('div')    
+    const photo = document.createElement('div')
+        
     photo.classList.add('photo')
     phrase.classList.add('phrase')
     
     if (score > 15) {                 
         photo.style.backgroundImage = 'url(./img/snow-globes-welsh-corgi.jpg)';       
-        phrase.innerHTML = `<span>Хорошо, я наелся. Вот моё предсказание:</span><br><br><i>В новом году тебя ждёт ${wishSet[i]}, если на столе будет ${foodSet[i]}</i>`       
+        phrase.innerHTML = `<span>Хорошо, я наелся. Вот моё предсказание:</span><br><br><i>В новом году тебя ждёт ${wishSet[i1]}, если на столе будет ${foodSet[i2]}</i>`       
         
     } else {        
         phrase.textContent = 'Корми ещё! Никаких предсказаний, пока я голоден!'
@@ -132,7 +134,7 @@ function getRandomNumber (min, max) {
 function getRandomIndex(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1)) + min; 
+    return Math.floor(Math.random() * (max - min + 1)); 
   }
 
 
