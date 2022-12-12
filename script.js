@@ -8,8 +8,8 @@ const board = document.querySelector('#board')
 const restartBtn = document.querySelector('#restart')
 const wishSet = ['любовь','удача','богатство','успех','добро','радость','крутость','путешествие','уют','отпуск','красота','беззаботность'];
 const foodSet = ['пицца','банановое лакомство','торт из Цеха','ролл с осьминогом','дорадо под соусом','салат с колбасой','сосиска в тесте','пончик со сгущёнкой','бургер с луком','гора пельменей','мандариновое пирожное','сыр с плесенью'];
-const i1 = getRandomIndex(0, 12);
-const i2 = getRandomIndex(0, 12);
+const i1 = getRandomIndex(0, 11);
+const i2 = getRandomIndex(0, 11);
 let time = 0
 let score = 0
 let treatId = 0
@@ -112,7 +112,7 @@ function makePrediction() {
     
     if (score > 19) {                 
         photo.style.backgroundImage = 'url(./img/snow-globes-welsh-corgi.jpg)';       
-        phrase.innerHTML = `<span>Хорошо, я наелся. Вот моё предсказание:</span><br><br><i>В новом году тебя ждёт ${wishSet[i1]}, если на столе будет ${foodSet[i2]}</i>`       
+        phrase.innerHTML = `Хорошо, я наелся. Вот предсказание:<br><br><i>В новом году тебя ждёт ${wishSet[i1]}, если на столе будет ${foodSet[i2]}</i>`       
         
     } else {        
         phrase.textContent = 'Корми ещё! Никаких предсказаний, пока я голоден!'
