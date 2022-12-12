@@ -155,6 +155,7 @@ button:hover {
 .board {
   width: 80%;
   height: 80%;
+  min-height: 70%;
   position: relative;
   background: linear-gradient(159deg, #FF0000, #751717);
   -webkit-box-shadow: inset 2px 3px 20px #573333, inset 4px 3px 9px #751717;
@@ -226,6 +227,6 @@ button:hover {
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0 auto;
-  width: 180px;
-  height: 180px;
+  width: 160px;
+  height: 160px;
 }
