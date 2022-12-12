@@ -49,12 +49,7 @@ function startGame() {
     setInterval(decreaseTime, 1000)
     createTapTreat()
     setTime(time)
-    // restartBtn.classList.remove('hide')
-    // restartBtn.classList.add('restart')
-    // restartBtn.addEventListener('click', () => {
-    //     screens[3].classList.add('down')
-    //     location.reload()    
-    // })
+    
 }
 
 function decreaseTime() {
@@ -78,7 +73,7 @@ function setTime(value) {
 
 function createTapTreat() {
     const tapTreat = document.createElement('div')
-    const size = getRandomNumber(20, 70)
+    const size = getRandomNumber(25, 70)
     const {height, width} = board.getBoundingClientRect()
     const x = getRandomNumber(0, width - size)
     const y = getRandomNumber(0, height - size)
@@ -103,8 +98,8 @@ function finishGame() {
     restartBtn.classList.remove('hide')
     restartBtn.classList.add('restart')
     restartBtn.addEventListener('click', () => {
-        window.location.replace('https://basicnat.github.io/game-feed-corgi/')
-           
+        // window.location.replace('https://basicnat.github.io/game-feed-corgi/')
+        window.location.replace(location)
     })
 }
 
@@ -115,7 +110,7 @@ function makePrediction() {
     photo.classList.add('photo')
     phrase.classList.add('phrase')
     
-    if (score > 18) {                 
+    if (score > 19) {                 
         photo.style.backgroundImage = 'url(./img/snow-globes-welsh-corgi.jpg)';       
         phrase.innerHTML = `<span>Хорошо, я наелся. Вот моё предсказание:</span><br><br><i>В новом году тебя ждёт ${wishSet[i1]}, если на столе будет ${foodSet[i2]}</i>`       
         
