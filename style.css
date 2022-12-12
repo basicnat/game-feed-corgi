@@ -148,8 +148,8 @@ button:hover {
 }
 
 .restart {
-  margin-bottom: 50px;
-  font-size: 1em;
+  margin-bottom: 55px;
+  font-size: 0.9em;
 }
 
 .board {
@@ -227,6 +227,6 @@ button:hover {
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0 auto;
-  width: 160px;
-  height: 160px;
+  width: 150px;
+  height: 150px;
 }
